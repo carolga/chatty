@@ -1,0 +1,29 @@
+[
+  {
+    "id": "SYN-001",
+    "publisher": "Chatty synthetic reference - not Fannie Mae or Freddie Mac",
+    "title": "Synthetic income documentation",
+    "section": "Example 1",
+    "version": "POC-1",
+    "text": "SYNTHETIC TEST POLICY, NOT REAL LENDING GUIDANCE. For this demonstration, income documentation review checks whether submitted income evidence covers the requested period and whether inconsistent amounts require a human review. No real income thresholds, loan approval rules, or investor requirements are defined by this example.",
+    "synthetic": true
+  },
+  {
+    "id": "SYN-002",
+    "publisher": "Chatty synthetic reference - not Fannie Mae or Freddie Mac",
+    "title": "Synthetic escrow servicing",
+    "section": "Example 2",
+    "version": "POC-1",
+    "text": "SYNTHETIC TEST POLICY, NOT REAL LENDING GUIDANCE. In this example, an escrow servicing question is reviewed by checking the account statement, the recorded tax and insurance expenses, and whether a human servicing specialist needs to explain a discrepancy. This example does not prescribe legal notices, deadlines, or actual investor servicing requirements.",
+    "synthetic": true
+  },
+  {
+    "id": "SYN-003",
+    "publisher": "Chatty synthetic reference - not Fannie Mae or Freddie Mac",
+    "title": "Synthetic borrower assistance",
+    "section": "Example 3",
+    "version": "POC-1",
+    "text": "SYNTHETIC TEST POLICY, NOT REAL LENDING GUIDANCE. A borrower assistance conversation in this demonstration routes hardship questions to an authorized human specialist. It does not determine eligibility for payment relief, promise a modification, or make a lending decision. Sensitive borrower identifiers should not be included in the chat.",
+    "synthetic": true
+  }
+]

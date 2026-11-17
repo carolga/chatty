@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Chatty nonproduction mortgage-guide retrieval POC",
+  "discoveredOn": "2026-11-16",
+  "status": "links-only-awaiting-content-use-authorization",
+  "documentsDownloaded": false,
+  "knowledgeIndexConfigured": false,
+  "sources": [
+    {
+      "id": "fannie-mae-selling-guide",
+      "publisher": "Fannie Mae",
+      "title": "Selling Guide",
+      "landingUrl": "https://selling-guide.fanniemae.com/",
+      "candidateDownloadUrl": "https://singlefamily.fanniemae.com/media/document/pdf/selling-guide-november-4-2026",
+      "publicationDateObserved": "2026-11-04",
+      "termsUrl": "https://selling-guide.fanniemae.com/copyright-and-preface",
+      "contentUseAuthorization": "unconfirmed",
+      "localFile": null,
+      "sha256": null,
+      "indexed": false
+    },
+    {
+      "id": "fannie-mae-servicing-guide",
+      "publisher": "Fannie Mae",
+      "title": "Servicing Guide",
+      "landingUrl": "https://servicing-guide.fanniemae.com/",
+      "candidateDownloadUrl": "https://singlefamily.fanniemae.com/media/document/pdf/servicing-guide-october-14-2026",
+      "publicationDateObserved": "2026-10-14",
+      "termsUrl": "https://servicing-guide.fanniemae.com/copyright-and-preface-0",
+      "contentUseAuthorization": "unconfirmed",
+      "localFile": null,
+      "sha256": null,
+      "indexed": false
+    },
+    {
+      "id": "freddie-mac-seller-servicer-guide",
+      "publisher": "Freddie Mac",
+      "title": "Single-Family Seller/Servicer Guide",
+      "landingUrl": "https://guide.freddiemac.com/",
+      "candidateDownloadUrl": null,
+      "publicationDateObserved": null,
+      "termsUrl": null,
+      "contentUseAuthorization": "unconfirmed",
+      "discoveryNote": "Current downloadable edition and applicable reuse terms still require verification; older search results were not selected as current.",
+      "localFile": null,
+      "sha256": null,
+      "indexed": false
+    }
+  ]
+}
