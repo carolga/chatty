@@ -367,3 +367,8 @@ The upstream infrastructure is pinned to Microsoft Foundry samples commit
 `8ed496738e26d91cde993d7fa6b6804590b55a2e`. The account module is adapted for
 Chatty's authentication and PII comparison policies. Original license notices
 are retained; see [third-party notices](THIRD_PARTY_NOTICES.md).
+
+## License
+
+Chatty is licensed under the [MIT License](LICENSE). Upstream copyright and
+license notices are preserved; see [third-party notices](THIRD_PARTY_NOTICES.md).

@@ -9,5 +9,5 @@ The account module was adapted for Chatty's authentication and comparison
 policies. Microsoft's MIT license and copyright notice are preserved in
 [`infra/foundry/UPSTREAM-LICENSE`](infra/foundry/UPSTREAM-LICENSE).
 
-That upstream license applies to the upstream material; it does not by itself
-license the rest of this repository.
+Chatty is also licensed under the [MIT License](LICENSE). The upstream copyright
+and license notice remain applicable to the upstream material.
