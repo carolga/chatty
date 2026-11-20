@@ -13,6 +13,12 @@ VS Code extension. It contains three editable pages: software, deployed Azure
 infrastructure, and PII defense in depth. The third page distinguishes the
 implemented path from proposed Microsoft security/governance integrations.
 
+The [editable SVG](foundry-security-layers.svg) summarizes where each control
+acts, from application-side redaction to Foundry guardrails, abuse monitoring,
+and optional enterprise controls.
+
+![Chatty architecture: application PII redaction before Foundry, inline input and output checks around inference, and separate monitoring and governance](foundry-security-layers.png)
+
 ## The important distinction
 
 **Redaction before inference**, **input blocking**, and **filtering a model's

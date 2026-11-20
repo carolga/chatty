@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="910" viewBox="0 0 1440 910" role="img" aria-labelledby="title desc">
+  <title id="title">Microsoft Foundry: Where each security control acts</title>
+  <desc id="desc">A left-to-right request path: the application redacts detected PII before sending screened text to Microsoft Foundry. Foundry has input and output checks around inference, with tool call and tool response checks in preview for supported agents. The application screens the buffered answer before display. Abuse monitoring is separate from inline filtering. Optional Purview, Defender, and OneLake controls are shown separately below.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L8 5L1 9" fill="none" stroke="#28637b" stroke-width="2"/></marker>
+    <symbol id="shield" viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3 8-8 11-5-3-8-6-8-11V5zM8 12l3 3 5-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="model" viewBox="0 0 24 24"><path d="M12 2l9 5v10l-9 5-9-5V7zM3 7l9 5 9-5M12 12v10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+    <symbol id="data" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M4 5v14c0 4 16 4 16 0V5M4 12c0 4 16 4 16 0" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+    <style>
+      text{font-family:'Segoe UI',Arial,sans-serif;fill:#142b40}
+      .k{font-size:13px;font-weight:700;letter-spacing:1.55px;fill:#285a71}
+      .hero{font-size:44px;font-weight:700;letter-spacing:-1.1px}
+      .sub{font-size:20px;fill:#405a6b}
+      .h{font-size:23px;font-weight:700}
+      .label{font-size:21px;font-weight:700}
+      .body{font-size:16px;fill:#344f60}
+      .small{font-size:14px;fill:#344f60}
+      .foot{font-size:13px;fill:#405a6b}
+      .flow{fill:none;stroke:#28637b;stroke-width:2.4;marker-end:url(#arrow)}
+      .dash{fill:none;stroke:#67798b;stroke-width:1.6;stroke-dasharray:6 5}
+      a text{fill:#205c76;text-decoration:underline}
+    </style>
+  </defs>
+  <rect width="1440" height="910" fill="#f7fafc"/>
+  <path d="M0 0H1440V8H0Z" fill="#142b40"/>
+  <rect x="44" y="34" width="27" height="5" rx="2.5" fill="#ffd84d"/>
+  <text x="82" y="41" class="k">CHATTY / ARCHITECTURE REFERENCE</text>
+  <text x="44" y="96" class="hero">Microsoft Foundry: Where each security control acts</text>
+  <text x="46" y="130" class="sub">Redact before inference. Filter at runtime. Monitor and govern separately.</text>
+
+  <rect x="44" y="157" width="260" height="403" rx="15" fill="#fff" stroke="#bacbd5"/>
+  <text x="64" y="190" class="k">01 / APPLICATION</text>
+  <text x="64" y="221" class="h">Before Foundry</text>
+  <rect x="64" y="251" width="220" height="110" rx="10" fill="#fff7d4" stroke="#c3a743"/>
+  <use href="#shield" x="80" y="269" width="24" height="24" color="#765d0a"/>
+  <text x="115" y="288" class="label">Redact input</text>
+  <text x="80" y="319" class="body">Azure AI Language</text>
+  <text x="80" y="342" class="body">Masks detected PII</text>
+  <text x="64" y="397" class="body">Chatty screens the question</text>
+  <text x="64" y="421" class="body">and retrieved context.</text>
+  <text x="64" y="453" class="body">If screening fails, stop.</text>
+  <text x="64" y="513" class="small">Detectors can miss PII.</text>
+  <text x="64" y="534" class="small">Screening is not a guarantee.</text>
+
+  <rect x="346" y="157" width="748" height="403" rx="15" fill="#eaf4f8" stroke="#6099ae" stroke-width="1.8"/>
+  <text x="368" y="190" class="k">02 / MICROSOFT FOUNDRY SERVICE BOUNDARY</text>
+  <text x="368" y="222" class="h">Inline controls around inference</text>
+  <text x="368" y="241" class="small">Coverage varies by model, agent, and configured policy.</text>
+  <rect x="368" y="251" width="198" height="110" rx="10" fill="#fff" stroke="#88acbc"/>
+  <use href="#shield" x="382" y="270" width="22" height="22" color="#28637b"/>
+  <text x="414" y="288" class="label">User input</text>
+  <text x="384" y="319" class="body">Harm filters, Prompt</text>
+  <text x="384" y="342" class="body">Shields, PII*</text>
+  <rect x="612" y="251" width="216" height="110" rx="10" fill="#142b40"/>
+  <use href="#model" x="630" y="270" width="22" height="22" color="#ffd84d"/>
+  <text x="662" y="288" class="label" style="fill:#fff">Agent / model</text>
+  <text x="630" y="319" class="body" style="fill:#e2eef5">Runs on the screened</text>
+  <text x="630" y="342" class="body" style="fill:#e2eef5">request if allowed</text>
+  <rect x="874" y="251" width="198" height="110" rx="10" fill="#fff" stroke="#88acbc"/>
+  <use href="#shield" x="890" y="270" width="22" height="22" color="#28637b"/>
+  <text x="922" y="288" class="label">Output</text>
+  <text x="890" y="319" class="body">Harm filters, PII*,</text>
+  <text x="890" y="342" class="body">protected material</text>
+  <path d="M284 309H364" class="flow"/>
+  <path d="M567 309H607" class="flow"/>
+  <path d="M829 309H869" class="flow"/>
+  <path d="M720 362V390" class="dash"/>
+  <rect x="368" y="390" width="704" height="54" rx="9" fill="#f7fbfd" stroke="#67798b" stroke-dasharray="6 5"/>
+  <text x="384" y="414" class="k">AGENT TOOLS / PREVIEW</text>
+  <text x="384" y="433" class="small">Tool call and tool response checks on supported agents. Chatty uses no tools.</text>
+  <rect x="368" y="456" width="704" height="54" rx="9" fill="#f7fbfd" stroke="#67798b" stroke-dasharray="6 5"/>
+  <use href="#eye" x="384" y="468" width="24" height="24" color="#536a7b"/>
+  <text x="419" y="478" class="k">SEPARATE / SERVICE ABUSE MONITORING</text>
+  <text x="419" y="499" class="small">Flagged content may be reviewed. Check the service terms for retention and geography.</text>
+  <text x="368" y="537" class="small">* PII controls (preview) can block or annotate where supported. They do not mask text.</text>
+
+  <rect x="1136" y="157" width="260" height="403" rx="15" fill="#fff" stroke="#bacbd5"/>
+  <text x="1156" y="190" class="k">03 / APPLICATION</text>
+  <text x="1156" y="221" class="h">Before display</text>
+  <rect x="1156" y="251" width="220" height="110" rx="10" fill="#fff7d4" stroke="#c3a743"/>
+  <use href="#shield" x="1172" y="269" width="24" height="24" color="#765d0a"/>
+  <text x="1207" y="288" class="label">Screen answer</text>
+  <text x="1172" y="319" class="body">Azure AI Language</text>
+  <text x="1172" y="342" class="body">Masks detected PII</text>
+  <text x="1156" y="397" class="body">Chatty buffers the answer</text>
+  <text x="1156" y="421" class="body">and checks citations.</text>
+  <text x="1156" y="453" class="body">No partial answer on block.</text>
+  <text x="1156" y="513" class="small">Output checks cannot undo</text>
+  <text x="1156" y="534" class="small">what a model already saw.</text>
+  <path d="M1073 309H1152" class="flow"/>
+
+  <text x="44" y="599" class="k">04 / OPTIONAL ENTERPRISE CONTROLS</text>
+  <text x="1396" y="599" text-anchor="end" class="small">Not wired into the Chatty demo</text>
+  <g>
+    <rect x="44" y="614" width="436" height="108" rx="11" fill="#fff" stroke="#bacbd5"/>
+    <use href="#shield" x="62" y="632" width="24" height="24" color="#28637b"/>
+    <text x="97" y="651" class="label">Microsoft Purview DLP</text>
+    <text x="62" y="681" class="body">The app can enforce policy blocks via Graph.</text>
+    <text x="62" y="703" class="body">Requires explicit integration; not a redactor.</text>
+    <rect x="502" y="614" width="436" height="108" rx="11" fill="#fff" stroke="#bacbd5"/>
+    <use href="#eye" x="520" y="632" width="24" height="24" color="#28637b"/>
+    <text x="555" y="651" class="label">Defender for AI Services</text>
+    <text x="520" y="681" class="body">Detects threats and raises security alerts.</text>
+    <text x="520" y="703" class="body">Redacting alert evidence is not prompt masking.</text>
+    <rect x="960" y="614" width="436" height="108" rx="11" fill="#fff" stroke="#bacbd5"/>
+    <use href="#data" x="978" y="632" width="24" height="24" color="#28637b"/>
+    <text x="1013" y="651" class="label">Fabric OneLake</text>
+    <text x="978" y="681" class="body">Catalog, govern, and control access to source data.</text>
+    <text x="978" y="703" class="body">Does not inspect Chatty's outbound prompt.</text>
+  </g>
+  <rect x="44" y="741" width="1352" height="59" rx="8" fill="#142b40"/>
+  <text x="62" y="765" class="k" style="fill:#ffd84d">WHAT CHATTY COMPARED</text>
+  <text x="62" y="786" class="body" style="fill:#fff">Same screened input and shared app protections. Guarded: custom PII controls. Baseline: no custom PII controls; other safety checks retained.</text>
+  <rect x="44" y="812" width="1352" height="42" rx="8" fill="#eaf4f8" stroke="#bacbd5"/>
+  <text x="62" y="838" class="k">IDENTITY &amp; NETWORK</text>
+  <text x="280" y="838" class="body">Entra sign-in, managed identity, role-based access, and private endpoints control access, not prompt content.</text>
+  <text x="44" y="883" class="foot">Reference design, not a live deployment.</text>
+  <a href="https://learn.microsoft.com/azure/foundry/guardrails/guardrails-overview"><text x="867" y="883" class="foot">Foundry guardrails</text></a>
+  <a href="https://learn.microsoft.com/azure/foundry/openai/concepts/abuse-monitoring"><text x="1008" y="883" class="foot">Abuse monitoring</text></a>
+  <a href="https://learn.microsoft.com/purview/developer/use-the-api"><text x="1140" y="883" class="foot">Purview APIs</text></a>
+  <a href="https://learn.microsoft.com/fabric/governance/microsoft-purview-fabric"><text x="1245" y="883" class="foot">Fabric governance</text></a>
+</svg>

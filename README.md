@@ -23,6 +23,7 @@ deployment script. `FoundryPromptAgent.cs` is the explicit Responses API adapter
 
 - [Ten-minute teaching/code walkthrough](docs/teaching-walkthrough.md)
 - [PII in Foundry: control boundaries, Defender, Purview, and OneLake](docs/pii-in-foundry.md)
+- Microsoft Foundry security layers: [PNG](docs/foundry-security-layers.png) | [editable SVG](docs/foundry-security-layers.svg)
 - [Editable draw.io architecture: software, Azure, and PII governance](docs/architecture.drawio)
 
 The route-map UI shows one exact screened question above two separate answers
